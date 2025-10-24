@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive  Flower Website Design Tutorials</title>
+    <!--Font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!--custom css file link-->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Модаль терезесінің стильдері */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .close-btn {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+        }
+
+        /* Карта мен форма */
+        .modal-body {
+            text-align: center;
+        }
+
+        .cart-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .heart-btn {
+            background-color: #ff5733;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+
+/* Цвет по умолчанию (серый) */
+.fas.fa-heart {
+    color: gray;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Когда товар добавлен в избранное (красный) */
+.fas.fa-heart.active {
+ color:red;
+}
+    </style>
+<link rel="stylesheet" href="/smartbasket/css/smartbasket.min.css">
+</head>
+
+<body>
+
+    <!--Header section starts-->
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="#" class="logo">FlowerFusion<span>.</span></a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+            <div class="icons">
+                <a href="#" class="favorite-icon">
+    <i class="fas fa-heart"></i>
+    <span id="favorite-count">0</span>
+</a><!-- Иконка корзины с добавленным счетчиком -->
+<a href="#" class="fas fa-shopping-cart smart-basket__min">
+</a>
+
+
+
+                <a href="http://localhost/index.php" class="fas fa-user"></a>
+
+            </div>
+
+
+    </header>
+
+     <!--Header section ends-->
+
+     <!--Home section starts-->
+     <section class="home" id="home">
+        <div class="content">
+            <h3>Fresh Flowers</h3>
+            <span>Natural & beautiful flowers</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aperiam dolorem aliquid exercitationem</p>
+            <a href="#" class="btn"> Shop Now</a>
+
+        </div>
+     </section>
+
+
+    <!--Home section starts-->
+
+ <!--About section starts-->
+<section class="about" id="about">
+    <h1 class="heading"><span>about</span> us</h1>
+    <div class="row">
+        <div class="video-container">
+            <video src="./images/about-vid1.mp4" loop autoplay muted></video>
+            <h3>best flowers sellers</h3>
+        </div>
+        <div class="content">
+            <h3>why choose us?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ad cupiditate numquam saepe quod vero repellat inventore vel et repellendus consequuntur, modi ex necessitatibus fuga eaque qui quibusdam voluptas dolore!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore sunt assumenda saepe ducimus accusamus debitis ex vel inventore sint earum modi repellendus exercitationem atque est eveniet sit blanditiis, doloremque voluptatum?</p>
+            <a href="about1.html" class="btn">Learn More</a>
+        </div>
+    </div>
+
+</section>
+
+ <!--About section ends-->
+<!--icons section starts-->
+
+<section class="icons-container">
+    <div class="icons">
+        <img src="./images/icon-1.png" alt="">
+        <div class="info">
+            <h3>Free delivery</h3>
+            <span>on all orders</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="./images/icon-2.png" alt="">
+        <div class="info">
+            <h3>10 days returns</h3>
+            <span>Moneyback guarantee</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="./images/icon-3.png" alt="">
+        <div class="info">
+            <h3>offer & gits</h3>
+            <span>on all orders</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="./images/icon-4.png" alt="">
+        <div class="info">
+            <h3>secure paymens</h3>
+            <span>protected by paypal</span>
+        </div>
+    </div>
+</section>
+
+<!--icons section ends-->
+
+
+<!-- Раздел товаров -->
+<section class="products" id="products">
+    <h1 class="heading"> Последние <span>товары</span></h1>
+    <div class="box-container">
+        <!-- Пример товара с data-атрибутами для JavaScript -->
+        <div class="box">
+    <span class="discount">-10%</span>
+    <div class="image">
+        <img src="./images/img-1.jpg" alt="">
+        <div class="icons">
+            <a href="#" class="fas fa-heart favorite-btn"
+               data-product-id="001"
+               data-product-name="Rose 1 pot"
+               data-product-price="16.99"
+               data-product-img="./images/img-1.jpg"> Добавить избранное</a>
+            <!-- Обновленная кнопка добавления в корзину -->
+            <a href="#" class="cart-btn"
+               data-sb-id-or-vendor-code="001"
+               data-sb-product-name="Rose 1 pot"
+               data-sb-product-price="16.99"
+               data-sb-product-quantity="1"
+               data-sb-product-img="./images/img-1.jpg"> add to cart</a>
+            <a href="#" class="fas fa-share"></a>
+        </div>
+    </div>
+    <div class="content">
+        <h3>Rose 1 pot</h3>
+<div class="price">$16.99 <span>$24.99</span></div>    </div>
+</div>
+
+
+
+        <div class="box">
+   <span class="discount">-15%</span>
+   <div class="image">
+       <img src="./images/img-2.jpg" alt="">
+       <div class="icons">
+           <a href="#" class="fas fa-heart favorite-btn"
+               data-product-id="002"
+               data-product-name="Rink queen rose"
+               data-product-price="15.99"
+               data-product-img="./images/img-2.jpg"> Добавить избранное</a>
+           <!-- Обновленная кнопка добавления в корзину -->
+           <a href="#" class="cart-btn"
+              data-sb-id-or-vendor-code="002"
+              data-sb-product-name="Pink queen rose"
+              data-sb-product-price="15.99"
+              data-sb-product-quantity="1"
+              data-sb-product-img="./images/img-2.jpg"> add to cart</a>
+           <a href="#" class="fas fa-share"></a>
+       </div>
+   </div>
+   <div class="content">
+       <h3>Pink queen rose</h3>
+       <div class="price">$15.99 <span>$35.99</span></div>
+   </div>
+</div>
+
+
+        <div class="box">
+            <span class="discount">-5%</span>
+            <div class="image">
+                <img src="./images/img-3.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart favorite-btn"
+               data-product-id="003"
+               data-product-name="Bloomnation"
+               data-product-price="12.99"
+               data-product-img="./images/img-3.jpg"> Добавить избранное</a>
+                    <!-- Обновленная кнопка добавления в корзину -->
+           <a href="#" class="cart-btn"
+              data-sb-id-or-vendor-code="003"
+              data-sb-product-name="Bloomnation"
+              data-sb-product-price="12.99"
+              data-sb-product-quantity="1"
+              data-sb-product-img="./images/img-3.jpg"> add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Bloomnation</h3>
+                <div class="price">$12.99 <span>$27.99</span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-20%</span>
+            <div class="image">
+                <img src="./images/img-4.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart favorite-btn"
+               data-product-id="004"
+               data-product-name="Fun bloomnation"
+               data-product-price="12.99"
+               data-product-img="./images/img-4.jpg"> Добавить избранное</a>
+                    <a href="#" class="cart-btn"
+              data-sb-id-or-vendor-code="004"
+              data-sb-product-name="Fun bloomnation"
+              data-sb-product-price="12.99"
+              data-sb-product-quantity="1"
+              data-sb-product-img="./images/img-4.jpg"> add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+
+                </div>
+            </div>
+            <div class="content">
+                <h3>Fun bloomnation</h3>
+                <div class="price">$12.99 <span>$25.99</span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-17%</span>
+            <div class="image">
+                <img src="./images/img-5.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart favorite-btn"
+               data-product-id="005"
+               data-product-name="White Bouquet"
+               data-product-price="11.99"
+               data-product-img="./images/img-5.jpg"> Добавить избранное</a>
+                    <a href="#" class="cart-btn"
+              data-sb-id-or-vendor-code="005"
+              data-sb-product-name="White Bouquet"
+              data-sb-product-price="11.99"
+              data-sb-product-quantity="1"
+              data-sb-product-img="./images/img-5.jpg"> add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+
+                </div>
+            </div>
+            <div class="content">
+                <h3>White bouquet</h3>
+                <div class="price">$11.99 <span>$15.99</span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-3%</span>
+            <div class="image">
+                <img src="./images/img-6.png" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart favorite-btn"
+               data-product-id="006"
+               data-product-name="Lavendor rose"
+               data-product-price="9.99"
+               data-product-img="./images/img-6.png"> Добавить избранное</a>
+                    <a href="#" class="cart-btn"
+              data-sb-id-or-vendor-code="006"
+              data-sb-product-name="Lavendor rose"
+              data-sb-product-price="9.99"
+              data-sb-product-quantity="1"
+              data-sb-product-img="./images/img-6.png"> add to cart</a>
+
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Lavendor rose</h3>
+                <div class="price">$9.99 <span>$15.99</span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-18%</span>
+            <div class="image">
+                <img src="./images/img-7.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart favorite-btn"
+               data-product-id="007"
+               data-product-name="Cottage rose"
+               data-product-price="10.99"
+               data-product-img="./images/img-7.jpg"> Добавить избранное</a>
+                    <a href="#" class="cart-btn"
+              data-sb-id-or-vendor-code="007"
+              data-sb-product-name="Cottage rose"
+              data-sb-product-price="10.99"
+              data-sb-product-quantity="1"
+              data-sb-product-img="./images/img-7.jpg"> add to cart</a>
+
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Cottage rose</h3>
+                <div class="price">$10.99 <span>$13.99</span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-10%</span>
+            <div class="image">
+                <img src="./images/img-8.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart favorite-btn"
+               data-product-id="008"
+               data-product-name="Red pot"
+               data-product-price="18.99"
+               data-product-img="./images/img-8.jpg"> Добавить избранное</a>
+                   <a href="#" class="cart-btn"
+              data-sb-id-or-vendor-code="008"
+              data-sb-product-name="Red pot"
+              data-sb-product-price="18.99"
+              data-sb-product-quantity="1"
+              data-sb-product-img="./images/img-8.jpg"> add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Red pot</h3>
+                <div class="price">$18.99 <span>$23.99</span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-5%</span>
+            <div class="image">
+                <img src="./images/img-9.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart favorite-btn"
+               data-product-id="009"
+               data-product-name="Red tulipa"
+               data-product-price="17.99"
+               data-product-img="./images/img-9.jpg"> Добавить избранное</a>
+                    <a href="#" class="cart-btn"
+              data-sb-id-or-vendor-code="009"
+              data-sb-product-name="Red tulipa"
+              data-sb-product-price="17.99"
+              data-sb-product-quantity="1"
+              data-sb-product-img="./images/img-9.jpg"> add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Red tulipa</h3>
+                <div class="price">$17.99 <span>$19.99</span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-15%</span>
+            <div class="image">
+                <img src="./images/img-10.png" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart favorite-btn"
+               data-product-id="010"
+               data-product-name="Pink pot"
+               data-product-price="20.99"
+               data-product-img="./images/img-10.png"> Добавить избранное</a>
+                    <a href="#" class="cart-btn"
+              data-sb-id-or-vendor-code="010"
+              data-sb-product-name="Pink pot"
+              data-sb-product-price="20.99"
+              data-sb-product-quantity="1"
+              data-sb-product-img="./images/img-10.png"> add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Pink pot</h3>
+                <div class="price">$20.99 <span>$32.99</span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-12%</span>
+            <div class="image">
+                <img src="./images/img-11.png" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart favorite-btn"
+               data-product-id="011"
+               data-product-name="Pink bouquet"
+               data-product-price="11.99"
+               data-product-img="./images/img-11.png"> Добавить избранное</a>
+                    <a href="#" class="cart-btn"
+              data-sb-id-or-vendor-code="011"
+              data-sb-product-name="Pink bouquet"
+              data-sb-product-price="11.99"
+              data-sb-product-quantity="1"
+              data-sb-product-img="./images/img-11.png"> add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Pink bouquet</h3>
+                <div class="price">$11.99 <span>$12.99</span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-9%</span>
+            <div class="image">
+                <img src="./images/img-12.png" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart favorite-btn"
+               data-product-id="012"
+               data-product-name="Purple flower"
+               data-product-price="14.99"
+               data-product-img="./images/img-12.png"> Добавить избранное</a>
+                    <a href="#" class="cart-btn"
+              data-sb-id-or-vendor-code="012"
+              data-sb-product-name="Purple flower"
+              data-sb-product-price="14.99"
+              data-sb-product-quantity="1"
+              data-sb-product-img="./images/img-12.png"> add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Purple flower</h3>
+                <div class="price">$14.99 <span>$18.99</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Products section ends-->
+
+
+<!--review section starts-->
+<section class="review" id="review">
+    <h1 class="heading">customer's <span>Review</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>A wonderful shop! A large selection of flowers for every taste and budget. I bought a bouquet here for a special occasion, and it made a huge impression! The flowers were fresh, beautifully arranged, and the presentation was just stunning. I was also very pleased with the attentive service. I highly recommend it to everyone!</p>
+            <div class="user">
+                <img src="./images/pic-1.png" alt="">
+                <div class="user-info">
+                    <h3>charles Deco</h3>
+                    <span>Happy Customers</span>
+                </div>
+            </div>
+            <span class="fas fa-quote-right"></span>
+        </div>
+
+        <div class="box">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>Great experience! I ordered a bouquet for my mom's birthday, and it exceeded all my expectations. The flowers were perfectly fresh, and the arrangement looked exquisite. The delivery was prompt and hassle-free. Thank you for your hard work and care for your customers!</p>
+            <div class="user">
+                <img src="./images/pic-2.png" alt="">
+                <div class="user-info">
+                    <h3>sharon michel</h3>
+                    <span>Happy Customers</span>
+                </div>
+            </div>
+            <span class="fas fa-quote-right"></span>
+        </div>
+
+        <div class="box">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>Fantastic service! The bouquet I ordered was beautiful and arrived on time. Highly recommend this flower shop!</p>
+            <div class="user">
+                <img src="./images/pic-3.png" alt="">
+                <div class="user-info">
+                    <h3>Abdullahi Ali</h3>
+                    <span>Happy Customers</span>
+                </div>
+            </div>
+            <span class="fas fa-quote-right"></span>
+        </div>
+
+        <div class="box">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>I had a great experience at [store name]. The staff was friendly and helped me choose a beautiful bouquet for my sister’s birthday. The flowers were fresh and lasted a long time. I will definitely come back for more!</p>
+            <div class="user">
+                <img src="./images/pic-4.png" alt="">
+                <div class="user-info">
+                    <h3>Sofia Wick</h3>
+                    <span>Happy Customers</span>
+                </div>
+            </div>
+            <span class="fas fa-quote-right"></span>
+        </div>
+    </div>
+</section>
+
+
+<!--review section ends-->
+
+<section class="contact" id="contact">
+    <h1 class="heading"><span>contact</span> us</h1>
+    <div class="row">
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Replace with your Access Key -->
+            <input type="hidden" name="access_key" value="d731443d-5ca4-470f-ab60-b19916e52fa5">
+
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <!-- Form Inputs -->
+            <input type="text" name="name" class="box" placeholder="Name" required>
+            <input type="email" name="email" class="box" placeholder="Email" required>
+            <input type="tel" name="number" class="box" placeholder="Phone Number" required>
+            <textarea name="message" class="box" placeholder="Message" cols="30" rows="10" required></textarea>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+        <div class="image">
+            <img src="./images/contact-img.svg" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- Modal Popup -->
+<div id="popupModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <p id="modalMessage"></p>
+    </div>
+</div>
+
+<style>
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 20px 0;
+    color: #333;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* Success and Error styling */
+.success {
+    color: green;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+</style>
+
+<script>
+    const contactForm = document.getElementById('contactForm');
+    const popupModal = document.getElementById('popupModal');
+    const modalMessage = document.getElementById('modalMessage');
+    const closeBtn = document.querySelector('.close-btn');
+
+    // Form submission handler
+    contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault(); // Prevent default form submission
+
+        try {
+            const formData = new FormData(contactForm);
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+            });
+
+            const result = await response.json();
+
+            if (response.ok && result.success) {
+                modalMessage.innerHTML = '<span class="success">Форма успешно отправлена!</span>';
+                contactForm.reset();
+            } else {
+                throw new Error(result.message || 'Что-то пошло не так!');
+            }
+        } catch (error) {
+            modalMessage.innerHTML = `<span class="error">Error: ${error.message}</span>`;
+        }
+
+        // Show the modal
+        popupModal.style.display = 'block';
+    });
+
+    // Close the modal when the close button is clicked
+    closeBtn.addEventListener('click', () => {
+        popupModal.style.display = 'none';
+    });
+
+    // Close the modal when clicking outside of the modal content
+    window.addEventListener('click', (event) => {
+        if (event.target === popupModal) {
+            popupModal.style.display = 'none';
+        }
+    });
+</script>
+
+
+
+<script>
+    emailjs.init("service_k4j6jx5"); // Ваш user ID
+
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        emailjs.sendForm("service_k4j6jx5", "your_template_id", this)
+            .then(function(response) {
+                alert("Message sent successfully!");
+            }, function(error) {
+                alert("Failed to send message: " + error);
+            });
+    });
+</script>
+
+
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+
+<!--contact section ends-->
+
+<!--footer section starts-->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">products</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+        </div>
+        <div class="box">
+            <h3>Extra links</h3>
+            <a href="#">my account</a>
+            <a href="#">my order</a>
+            <a href="#">my favorites</a>
+        </div>
+        <div class="box">
+            <h3>Locations</h3>
+            <a href="#">India</a>
+            <a href="#">USA</a>
+            <a href="#">France</a>
+            <a href="#">Japan</a>
+            <a href="https://2gis.kz/almaty/geo/70000001055621916">Kazakhstan</a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="https://wa.me/+77771786125" class="whatsapp-link" target="_blank">+77771786125</a>
+            <a href="mailto:aktoty1909@mail.ru?subject=Вопрос&body=Здравствуйте,%20у%20меня%20есть%20вопрос.">aktoty1909@mail.ru</a>
+            <a href="https://2gis.kz/almaty/branches/70000001055621885">Kazakhstan, Almaty-050000</a>
+          <img src="./images/payment.png" alt="">
+        </div>
+    </div>
+    <div class="credit">
+        &copy; Created by <span>Zhappar Aktoty [Mrs.Coding]</span> All Right Reserved.
+    </div>
+</section>
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="smartbasket/css/smartbasket.min.css">
+<script src="./smartbasket/js/smartbasket.min.js"></script>
+
+
+
+<link rel="stylesheet" href="smartbasket/css/smartbasket.min.css">
+
+<div class="smart-basket__wrapper"></div>
+
+<script src="./smartbasket/js/smartbasket.min.js"></script>
+
+
+
+
+
+
+	<script>
+    $(function () {
+        $('.smart-basket__wrapper').smbasket({
+            productElement: 'box',
+            buttonAddToBasket: 'cart-btn',
+            productPrice: 'price product__price-number',
+            productQuantityWrapper: 'product__quantity',
+            smartBasketMinArea: 'fas.fa-shopping-cart',
+            countryCode: '+7',
+            smartBasketCurrency: '$',
+            smartBasketMinIconPath: './smartbasket/img/shopping-basket-wight.svg',
+
+            agreement: {
+                isRequired: true,
+                isChecked: true,
+                isLink: 'https://secure.wayforpay.com/button/bf63800904f51',
+            },
+            nameIsRequired: false,
+        });
+         $('.smart-basket__min').on('click', function() {
+            // Скрыть или показать текст "Корзина"
+            $('.cart-label').toggle();
+
+        });
+
+    });
+</script>
+<script>
+// Добавление товара в корзину
+    document.querySelectorAll('.cart-btn').forEach(item => {
+        item.addEventListener('click', function() {
+            alert('Товар добавлен в корзину!');
+        });
+    });
+
+    // Копирование ссылки на товар
+    document.querySelectorAll('.fa-share').forEach(item => {
+        item.addEventListener('click', function() {
+            const productLink = window.location.href; // замените на ссылку товара, если нужно
+            navigator.clipboard.writeText(productLink).then(function() {
+                alert('Ссылка скопирована!');
+            }, function() {
+                alert('Не удалось скопировать ссылку');
+            });
+        });
+    });
+</script>
+ <script>
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    const name = document.querySelector('input[name="name"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const message = document.querySelector('textarea[name="message"]').value;
+
+    if (!name || !email || !message) {
+        alert("Please fill in all required fields.");
+        event.preventDefault(); // Останавливает отправку формы, если поля не заполнены
+}
+});
+</script>
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Функция отображения количества избранных товаров
+    function updateFavoriteCount() {
+        const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+        document.getElementById("favorite-count").textContent = favorites.length;
+    }
+
+    // Функция для добавления товара в избранное
+    function addToFavorites(product) {
+        const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+        // Проверяем, есть ли уже товар в избранном
+        if (!favorites.find((item) => item.id === product.id)) {
+            favorites.push(product);
+            localStorage.setItem("favorites", JSON.stringify(favorites));
+            alert("Товар добавлен в избранное!");
+        } else {
+            alert("Этот товар уже добавлен в избранное");
+        }
+        updateFavoriteCount();
+    }
+
+    // Функция для удаления товара из избранного
+    function removeFromFavorites(productId) {
+        let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+        favorites = favorites.filter((item) => item.id !== productId); // Удаляем товар
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+        alert("Товар удален из избранного!");
+        updateFavoriteCount();
+    }
+
+    // Обработчик для кнопок "Добавить в избранное" и "Удалить из избранного"
+    document.querySelectorAll(".favorite-btn").forEach((button) => {
+        button.addEventListener("click", function (e) {
+            e.preventDefault();
+            const product = {
+                id: button.getAttribute("data-product-id"),
+                name: button.getAttribute("data-product-name"),
+                price: button.getAttribute("data-product-price"),
+                img: button.getAttribute("data-product-img"),
+            };
+
+            // Проверяем, находится ли товар в избранном
+            const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+            if (favorites.find((item) => item.id === product.id)) {
+                // Если товар уже в избранном, удаляем его
+                removeFromFavorites(product.id);
+                button.classList.remove("added");  // Можно добавить визуальное изменение для кнопки
+            } else {
+                // Если товара нет в избранном, добавляем его
+                addToFavorites(product);
+                button.classList.add("added");
+                button.classList.toggle("added");// Можно добавить визуальное изменение для кнопки
+            }
+        });
+    });
+
+    // Отображение количества избранных товаров при загрузке страницы
+    updateFavoriteCount();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const favoritesList = document.getElementById("favorites-list");
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+    favorites.forEach((product) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+            <img src="${product.img}" alt="${product.name}">
+            <span>${product.name}</span> - <span>$${product.price}</span>
+        `;
+        favoritesList.appendChild(li);
+});
+});
+</script>
+
+<button class="smart-basket__min"><img class="smart-basket__min-icon" src="./smartbasket/img/shopping-basket-wight.svg" width="18" alt="Корзина"><span class="smart-basket__min-count">0</span></button>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.fa-heart').on('click', function(event) {
+                event.preventDefault();  // Предотвращаем переход по ссылке
+                $(this).toggleClass('active');  // Переключаем класс .active
+            });
+        });
+</script>
+<!-- Блок новостей внизу сайта -->
+<section class="news-section"> 
+    <h2 class="news-heading">Новости сайта</h2>
+    <div class="news-container">
+        <div class="news-card">
+            <div class="news-image" style="background-image: url('./news/советы.gif');"></div>
+            <div class="news-content">
+                <h3>Запуск нового раздела</h3>
+                <p>Рады сообщить о запуске нового раздела, где вы найдете интересные статьи и советы!</p>
+                <a href="launching-new-section.html" class="read-more-btn">Подробнее</a>
+            </div>
+        </div>
+        <div class="news-card">
+            <div class="news-image" style="background-image: url('./news/convinient.jpg');"></div>
+            <div class="news-content">
+                <h3>Обновление интерфейса</h3>
+                <p>Мы обновили дизайн сайта, чтобы сделать его более удобным и современным.</p>
+                <a href="interface-update.html" class="read-more-btn">Подробнее</a>
+            </div>
+        </div>
+        <div class="news-card">
+            <div class="news-image" style="background-image: url('./news/special\ offers.jpg');"></div>
+            <div class="news-content">
+                <h3>Специальные предложения</h3>
+                <p>Не пропустите наши эксклюзивные предложения и скидки в этом месяце!</p>
+                <a href="special-offers.html" class="read-more-btn">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+</body>
+</html>
